@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Delete Lines Python Script
+# Get Lines Python Script
 
 from sys import argv, stdout # Imports arguments and stdout from sys
 
@@ -21,4 +21,9 @@ for string in find:
             n.write(line)      # If it exists, write it to new file
 
 n.close() # Close the new file
-print("Printed every line that contained "+find+" to file: "+newFile)
+
+printFind = "[{0}]".format(", ".join(str(i) for i in find))
+
+print("\nPrinted every line that contained "+printFind+" to file: "+newFile)
+
+#print '[%s]' % ', '.join(map(str, find))

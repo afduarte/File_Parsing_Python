@@ -21,4 +21,6 @@ for string in find:            # For every string passed in and
             n.write(line)      # If it exists, don't write it to new file.
 
 n.close() # Close the new file
-print("Deleted every line that contained "+find+" output to file: "+newFile)
+
+printFind = "[{0}]".format(", ".join(str(i) for i in find))
+print("\nDeleted every line that contained "+printFind+" output to file: "+newFile)
