@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Get Lines Python Script
+# Count Lines Python Script
 
 from sys import argv, stdout # Imports arguments and stdout from sys
 
@@ -11,17 +11,16 @@ f = open(oldFile,"r") # Open the old file in read mode
 lines = f.readlines() # Create array with every line in the old file
 f.close() # Close the old file
 
-newFile = oldFile+".new" # New file name is oldfilename.extension.new
-
-n = open(newFile,"w") # Open new file in write mode
+counts = []
 
 for string in find:
+    acc = 0
     for line in open(oldFile): # For every line in the old file
         if string in line:     # Check for find string
-            n.write(line)      # If it exists, write it to new file
+            acc += 1           # Increment for each line that has string
+    counts.append(acc)         # Append value to list
 
-n.close() # Close the new file
+print("\nString : Count\r")
 
-printFind = "[{0}]".format(", ".join(str(i) for i in find))
-
-print("\rPrinted every line that contained "+printFind+" to file: "+newFile)
+for string, number in zip(find, counts) :
+        print  "%s : %d\r" % (string, number)
