@@ -24,6 +24,4 @@ n.close() # Close the new file
 
 printFind = "[{0}]".format(", ".join(str(i) for i in find))
 
-print("\nPrinted every line that contained "+printFind+" to file: "+newFile)
-
-#print '[%s]' % ', '.join(map(str, find))
+print("\rPrinted every line that contained "+printFind+" to file: "+newFile)
