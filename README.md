@@ -2,7 +2,8 @@
 
 ##File Parsing scripts done with python
 
-*delete_lines.py*
+**delete_lines.py**
+
 Delete any lines that contain the string passed as the second argument
 
-USAGE: ´´´python delete_lines.py /path/to/file "String to search for"´´´
+USAGE: ```python delete_lines.py /path/to/file "String to search for"```
