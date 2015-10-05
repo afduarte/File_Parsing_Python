@@ -1,0 +1,26 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# Count Lines Python Script
+
+from sys import argv, stdout # Imports arguments and stdout from sys
+
+oldFile = argv[1] # The path for the file we want to modify
+find = argv[2:] # The array of different strings we want to look for (every argument after the first one)
+
+f = open(oldFile,"r") # Open the old file in read mode
+lines = f.readlines() # Create array with every line in the old file
+f.close() # Close the old file
+
+counts = []
+
+for string in find:
+    acc = 0
+    for line in open(oldFile): # For every line in the old file
+        if string in line:     # Check for find string
+            acc += 1           # Increment for each line that has string
+    counts.append(acc)         # Append value to list
+
+print("\nString : Count\r")
+
+for string, number in zip(find, counts) :
+        print  "%s : %d\r" % (string, number)
