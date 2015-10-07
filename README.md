@@ -6,13 +6,13 @@
 
 Delete any lines that contain any of the strings passed as arguments
 
-USAGE: ```delete_lines /path/to/file "1st String to search for" "2nd String to search for" ... "nth String to search for"```
+USAGE: ```delete_lines /path/to/inputfile /path/to/outputfile "1st String to search for" "2nd String to search for" ... "nth String to search for"```
 
 **get_lines**
 
 Get any lines that contain any of the strings passed as arguments
 
-USAGE: ```delete_lines /path/to/file "1st String to search for" "2nd String to search for" ... "nth String to search for"```
+USAGE: ```delete_lines /path/to/inputfile /path/to/outputfile "1st String to search for" "2nd String to search for" ... "nth String to search for"```
 
 **count_lines**
 
