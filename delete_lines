@@ -10,10 +10,10 @@ find = argv[3:] # The array of different strings we want to look for (every argu
 
 n = open(newFile,"w") # Open new file in write mode
 
-for string in find:            # For every string passed in and
-    for line in open(oldFile): # For every line in the old file
+for line in open(oldFile):     # For every line in the old file and
+    for string in find:        # For every string passed in
         if string not in line: # Check for string
-            n.write(line)      # If it exists, don't write it to new file.
+            n.write(line)      # If it doesn't exist, write it to the new file.
 
 n.close() # Close the new file
 
